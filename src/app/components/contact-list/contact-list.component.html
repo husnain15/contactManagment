@@ -1,0 +1,36 @@
+<div class="top-navbar">
+    <!-- Left Side -->
+    <div class="left">
+        <div class="hamburger">&#9776;</div>
+      <span class="contact">Contact</span>
+    </div>
+    
+    <!-- Right Side -->
+    <div class="right">
+      <div class="arrows">
+        <span class="arrow">&#10094;</span> <!-- Less than (left arrow) -->
+        <span class="arrow">&#10095;</span> <!-- Greater than (right arrow) -->
+      </div>
+    </div>
+  </div>
+  <hr class="navbar-divider">
+
+
+<div class="contact-list-container">
+    <input type="text" placeholder="Search for a contact" class="search-bar" />
+  
+    <div class="contact" *ngFor="let contact of contacts" (click)="selectContact(contact)">
+      <img [src]="avatar" alt="Avatar" class="avatar" />
+      <div class="contact-info">
+        <h3>{{ contact.firstName }}</h3>
+        <p>{{ contact.role }}</p>
+      </div>
+      <!-- Icons shown on hover -->
+      <div class="icons">
+        <i class="fa-duotone fa-solid fa-message"></i>
+        <i class="fa-solid fa-phone"></i>
+        <i class="fas fa-ellipsis-h"></i>
+      </div>
+    </div>
+  </div>
+ 

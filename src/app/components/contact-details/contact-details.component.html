@@ -1,0 +1,66 @@
+<div  class="contact-page">
+  <div *ngFor="let contact of contactDetail">
+  <!-- Avatar and Title Section -->
+  <div class="header">
+      <div class="avatar">
+          <img [src]=avatar alt="Avatar">
+      </div>
+      <div  class="title-section">
+          <h1>{{contact.firstName}}</h1>
+          <p class="role">{{contact.role}}</p>
+          <div class="buttons">
+              <button class="message-btn"><i class="fa-solid fa-message"></i>Message</button>
+              <button class="call-btn"><i class="fa-solid fa-phone"></i></button>
+              <button class="upload-btn"><i class="fa-solid fa-upload"></i></button>
+              <button class="more-btn"><i class="fa-solid fa-ellipsis"></i> </button>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Title and Details Section -->
+  <div class="details-section">
+      <div class="details-header">
+          <h2>{{contact.Detal}}</h2>
+          <p class="details">{{contact.Email}} Read about sdfsadf by dfasdf and see the artwork, lyrics and similar artists.
+            Read about sdfsadf by dfasdf and see the artwork, lyrics and similar artists.
+          </p>
+          <button class="show-button">Show</button>
+      </div>
+  </div>
+  <div class="details-section">
+      <div class="details-header">
+          <h2>{{contact.Detal}}</h2>
+          <p class="details">{{contact.Email}}</p>
+          <button class="show-button">Show</button>
+      </div>
+  </div>
+  <div class="details-section">
+      <div class="details-header">
+          <h2>{{contact.Detal}}</h2>
+          <p class="details">{{contact.Email}}</p>
+          <button class="show-button">Primary</button>
+      </div>
+  </div>
+  
+</div>
+<div class="social-media-container">
+  <div class="title">Social Media</div>
+  <div class="buttonsMedia">
+    <button class="facebook buttonSocialMedia">
+      <i class="fab fa-facebook"></i> Facebook
+    </button> 
+    <button class="linkedin buttonSocialMedia">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </button> 
+    <button class="twitter buttonSocialMedia">
+      <i class="fab fa-twitter"></i> Twitter
+    </button> 
+    <button class="google buttonSocialMedia" >
+      <i class="fab fa-google"></i> Google
+    </button>
+  </div>
+</div>
+
+
+</div>
+
