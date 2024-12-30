@@ -15,6 +15,7 @@ export class ContactService {
   }
 
   getContactDetail(contactId: string): Observable<any> {
+    console.log("")
     return this.http.get(`${this.baseUrl}/contact/${contactId}`);
   }
 }
