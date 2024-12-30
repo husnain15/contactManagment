@@ -112,68 +112,129 @@
   color: white;
 }
 
-/* Container for the entire layout */
+/* Social Media Section */
 .social-media-container {
-  display: flex;                 /* Use flex to align items */
-  justify-content: space-between; /* Spread title and buttons across the container */
-  align-items: center;           /* Vertically center elements */
-  
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  align-items: center;         /* Vertically center elements */
+  margin-top: 20px;
 }
 
-/* Style for the title on the left */
-.title {
-  font-size: 14px;
+.social-media-container .title {
+  font-size: 1rem;
   font-weight: 400;
   color: grey;
+  margin-right: 20px; /* Add some spacing between title and buttons */
 }
 
-/* Container for the buttons */
 .buttonsMedia {
   display: flex;
-  gap: 10px;  
-margin-top: 10px;}
+  gap: 10px;
+  align-items: center; /* Ensure buttons are vertically centered */
+}
 
-/* Style for individual buttons */
+/* Style for individual icon-only buttons */
 .buttonSocialMedia {
   display: flex;
-  align-items: center;        /* Align icon and text vertically */
-  justify-content: flex-start; /* Align icon to the left */
-  padding: 10px 20px;
-  font-size: 16px;
+  align-items: center;           /* Align icon vertically */
+  justify-content: center;       /* Center the icon horizontally */
+  width: 70px;                   /* Adjust button size to be smaller */
+  height: 50px;                  /* Adjust button height to fit icons */
+  font-size: 1.5rem;             /* Increase icon size */
   border: none;
-  border-radius: 4px;
+  border-radius: 10%;            /* Make buttons circular */
   cursor: pointer;
-  background-color: white;  /* Default color for Facebook button */
+  background-color: #ECEEF5;     /* Background color for all buttons */
   color: grey;
-  width: 150px;               /* Fixed width for each button */
-}
-
-/* Button specific colors */
-.linkedin {
-  background-color: #ECEEF5;
-}
-
-.twitter {
-  background-color: #ECEEF5;
-}
-
-.google {
-  background-color: #ECEEF5;
-}
-
-.facebook {
-  background-color: #ECEEF5;
+  transition: background-color 0.3s, opacity 0.3s;
 }
 
 /* Button hover effect */
-button:hover {
-  opacity: 0.8;
+.buttonSocialMedia:hover {
+  background-color: #8083A3;     /* Change background color on hover */
+  opacity: 0.8;                  /* Slight opacity change */
+  color: white;                  /* Change icon color on hover */
 }
 
 /* Icon styling */
-i {
-  margin-right: 10px;  /* Space between icon and text */
+.icon {
+  margin: 20px;                     /* Remove any margin around the icon */
+  font-size: 2rem;               /* Make icons larger for visibility */
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 15px;
+  }
 
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .avatar {
+    margin-bottom: 15px;
+  }
+
+  .title-section h1 {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .buttons button {
+    width: 60%;
+  }
+
+  .details-section {
+    margin-top: 15px;
+  }
+
+  .social-media-container {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .buttonsMedia {
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .buttonSocialMedia {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title-section h1 {
+    font-size: 1rem;
+  }
+
+  .title-section .role {
+    font-size: 0.875rem;
+  }
+
+  .buttons button {
+    font-size: 0.75rem;
+  }
+
+  .details-header h2 {
+    font-size: 0.875rem;
+  }
+
+  .details-header .details {
+    font-size: 0.875rem;
+  }
+
+  .show-button {
+    font-size: 0.75rem;
+  }
+
+  .buttonSocialMedia {
+    font-size: 0.875rem;
+  }
+}

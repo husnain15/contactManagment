@@ -1,166 +1,290 @@
+/* Top Navbar */
 .top-navbar {
-    display: flex;
-    justify-content: space-between; /* Distribute the items on the left and right */
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #F8F9FC;
-    color: black;
-    font-size: 20px;
-  }
-  
-  /* Left side of the navbar */
-  .left {
-    display: flex;
-    align-items: center;
-  }
-  .navbar-divider {
-    border: none; /* Remove default border */
-    height: 1px; /* Set height for the line */
-    background-color: #ccc;
-    margin: 0;
-  }
-  
-  .contact {
-    font-weight: 500;
-    margin-right: 15px;
-    margin-top: 10px;
-  }
-  
-  .hamburger {
-    font-size: 18px;
-    cursor: pointer;
-    display: inline-block;
-    background-color: white; /* White background for hamburger */
-    color: grey; /* Icon color */
-    border-radius: 20%; /* Make it round */
-    padding: 5px; /* Padding to create the round effect */
-    transition: background-color 0.3s ease; /* Smooth transition */
-  }
-  
-  .hamburger:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
-  }
-  
-  /* Right side of the navbar */
-  .right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .arrows {
-    display: flex;
-    gap: 15px; /* Space between the arrows */
-  }
-  
-  .arrow {
-    font-size: 18px; /* Adjust arrow size */
-    cursor: pointer;
-    background-color: white; /* White background for arrows */
-    color: grey; /* Icon color */
-    border-radius: 20%; /* Round the background */
-    padding: 10px; /* Padding to create the circular background */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-  }
-  
-  .arrow:hover {
-    background-color: #f0f0f0; /* Light gray background on hover */
-    color: #007bff; /* Change color on hover */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #F8F9FC;
+  color: black;
+  font-size: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
 
+/* Left Side of Navbar */
+.left {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Make left section flexible */
+  margin-right: 20px;
+}
+
+.navbar-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0;
+}
+
+/* Contact Text Styling */
+.contact {
+  font-weight: 500;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+/* Hamburger Styling */
+.hamburger {
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: white;
+  color: grey;
+  border-radius: 20%;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #f0f0f0;
+}
+
+/* Right Side of Navbar */
+.right {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Make right section flexible */
+  justify-content: flex-end; /* Align the right side to the end */
+  gap: 15px;
+}
+
+/* Arrows */
+.arrows {
+  display: flex;
+  gap: 15px;
+}
+
+.arrow {
+  font-size: 18px;
+  cursor: pointer;
+  background-color: white;
+  color: grey;
+  border-radius: 20%;
+  padding: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+/* Contact List Container */
 .contact-list-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: #FAF9FF;
-  }
-  
-  .search-bar {
-    width: 70%;
-    padding: 10px 30px 10px 10px; /* Padding to make space for the icon */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-image: url('https://www.vecteezy.com/vector-art/9652218-vector-magnifying-glass-icon-isolated-on-white-background-search-illustration'); /* Search icon URL */
-    background-size: 16px 16px; /* Set size of the icon */
-    background-repeat: no-repeat;
-    background-position: 10px center; /* Position the icon on the left */
-  }
-  
-  .search-bar:focus {
-    outline: none; /* Remove the default outline when focused */
-  }
-  
-  .contact {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    position: relative;
-  }
-  
-  .contact:hover {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .avatar {
-    width: 50px; /* Ensure this is large enough */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #FAF9FF;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 90%;
+  padding: 10px 30px 10px 30px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-image: url('https://www.vecteezy.com/vector-art/9652218-vector-magnifying-glass-icon-isolated-on-white-background-search-illustration');
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+/* Contact Styling */
+.contact {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.contact:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar Styling */
+.avatar {
+  width: 50px;
   height: 50px;
-  border-radius: 10%; /* Make it a circle */
+  border-radius: 50%; /* Circular avatar */
   margin-right: 15px;
   position: relative;
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
+  border: 2px solid white;
+  z-index: 1;
+}
+
+/* Contact Info Styling */
+.contact-info h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.contact-info p {
+  margin: 0;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Icons Styling */
+.icons {
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 10px;
+}
+
+.icons i {
+  font-size: 18px;
+  color: lightgray;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.icons i:hover {
+  color: #6B59CC;
+  background-color: #f0f0f0;
+}
+
+/* Responsive Design for Mobile/Tablets */
+@media (max-width: 768px) {
+  /* Adjust Navbar for Small Screens */
+  .top-navbar {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  .avatar::after {
-    content: ''; /* Empty content to create the dot */
-    position: absolute;
-    bottom: 5px; /* 5px from the bottom */
-    right: 5px; /* 5px from the right */
-    width: 10px; /* Size of the dot */
-    height: 10px; /* Size of the dot */
-    background-color: green; /* Dot color (you can change this) */
-    border-radius: 50%; /* Make the dot circular */
-    border: 2px solid white; /* Optional: white border around the dot */
-    z-index: 1; /* Ensure the dot is above the avatar image */
+
+  .left {
+      flex: none; /* Remove flex grow for left section */
+      margin-bottom: 10px;
   }
-  
-  .contact-info h3 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 500;
+
+  .right {
+      flex: none; /* Remove flex grow for right section */
+      margin-bottom: 10px;
+      justify-content: flex-start; /* Align items to the start */
   }
-  
-  .contact-info p {
-    margin: 0;
-    color: gray;
-    font-size: 14px;
+
+  .hamburger {
+      font-size: 22px;
+      margin-left: auto; /* Align hamburger to the right on small screens */
   }
-  
-  /* Icon container */
+
+  .arrows {
+      gap: 10px;
+  }
+
+  /* Adjust Search Bar */
+  .search-bar {
+      width: 90%; /* Make search bar take more space */
+      margin: 10px 0;
+  }
+
+  /* Contact List Container */
+  .contact-list-container {
+      /* padding: 10px; */
+      width: 100%;
+  }
+
+  /* Contact Styling */
+  .contact {
+      flex-direction: column; /* Stack avatar and info vertically */
+      align-items: flex-start;
+      padding: 15px;
+      margin-bottom: 15px;
+      width: 100%;
+  }
+
+  .avatar {
+      width: 40px;
+      height: 40px;
+  }
+
+  /* Icons within contacts */
   .icons {
-    display: flex; /* Keep the icons always visible */
-    position: absolute;
-    right: 10px; /* Position the icons on the right side */
-    top: 50%;
-    transform: translateY(-50%);
-    gap: 10px; /* Space between icons */
+      right: 10px;
+      top: auto;
+      bottom: 10px;
+      transform: none;
   }
-  
-  /* Style for each icon */
+
   .icons i {
-    font-size: 18px;
-    color: lightgray; /* Light gray icon color */
-    background-color: white; /* White background for the icon */
-    border-radius: 8px; /* Rounded square background */
-    padding: 8px; /* Add some padding to make the background around the icon */
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
+      font-size: 16px;
+      padding: 6px;
   }
-  
-  /* Hover effect on icons */
-  .icons i:hover {
-    color: #6B59CC; /* Change icon color on hover */
-    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+/* Responsive Design for Extra Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  /* Top Navbar font size */
+  .top-navbar {
+      font-size: 18px;
+      padding: 8px 15px;
   }
-  
+
+  /* Contact list container */
+  .contact-list-container {
+      padding: 8px;
+  }
+
+  /* Avatar and contact info adjustments for phone screens */
+  .avatar {
+      width: 35px;
+      height: 35px;
+  }
+
+  .contact-info h3 {
+      font-size: 13px;
+  }
+
+  .contact-info p {
+      font-size: 12px;
+  }
+
+  /* Adjust Contact item layout */
+  .contact {
+      padding: 12px;
+  }
+
+  /* Icon size adjustments */
+  .icons i {
+      font-size: 14px;
+      padding: 5px;
+  }
+}
